@@ -1,0 +1,15 @@
+services:
+  postgres_db_tg:
+    image: postgres:latest
+    container_name: postgres_db_tg_container
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql
+
+volumes:
+  postgres_data:
